@@ -1,0 +1,10 @@
+[06-Nov-2010 06:26:05] PHP Warning:  copy(http://www.gravatar.com/avatar/39c8e6577829251754acc350d9e9317c?s=42&amp;d=http://demo.xianyunyehe.net/wp-content/themes/SLife/images/default.jpg&amp;r=G) [<a href='function.copy'>function.copy</a>]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/yehe/public_html/demo/wp-content/themes/SLife/functions.php on line 209
+[06-Nov-2010 06:26:05] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for /home/yehe/public_html/demo/avatar/39c8e6577829251754acc350d9e9317c.jpg in /home/yehe/public_html/demo/wp-content/themes/SLife/functions.php on line 211
+[06-Nov-2010 06:26:05] PHP Warning:  copy(http://demo.xianyunyehe.net/wp-content/themes/SLife/images/default.jpg) [<a href='function.copy'>function.copy</a>]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/yehe/public_html/demo/wp-content/themes/SLife/functions.php on line 211
+[06-Nov-2010 06:26:58] PHP Warning:  copy(http://www.gravatar.com/avatar/39c8e6577829251754acc350d9e9317c?s=42&amp;d=http://demo.xianyunyehe.net/wp-content/themes/SLife/images/default.jpg&amp;r=G) [<a href='function.copy'>function.copy</a>]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/yehe/public_html/demo/wp-content/themes/SLife/functions.php on line 209
+[06-Nov-2010 06:26:58] PHP Warning:  filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for /home/yehe/public_html/demo/avatar/39c8e6577829251754acc350d9e9317c.jpg in /home/yehe/public_html/demo/wp-content/themes/SLife/functions.php on line 211
+[06-Nov-2010 06:26:58] PHP Warning:  copy(http://demo.xianyunyehe.net/wp-content/themes/SLife/images/default.jpg) [<a href='function.copy'>function.copy</a>]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/yehe/public_html/demo/wp-content/themes/SLife/functions.php on line 211

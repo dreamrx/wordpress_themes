@@ -1,0 +1,175 @@
+/*
+Theme Name: A9
+Theme URI: http://kan.willin.org/?p=1330
+Description: A9 built-in functions: Ajax-comments, Anti-spam, Change-header-image, Change-sidebar-position, Comment-embed-images, Comments-distinction, Comment-mail-notify, Gavatar-cache, Http-gzip, Mini-pagenavi, Popular-posts, Related-posts, Recent-comments... all my own codes. also Valid XHTML & CSS.
+Author: Willin Kan
+Author URI: http://kan.willin.org/
+Version: 1.9.1
+*/
+
+/* common define */
+html          {background:url(img/bg.jpg) #535756; }
+body          {margin:0; padding:0; font:15px/25px Arial; color:#2e3232;}
+a             {color:#2e3232;}
+a:hover       {color:#000;}
+img           {margin:0; border:0;}
+ol, ul, li    {list-style:none; margin:0; padding:0;}
+p             {margin:3px 0;}
+h3            {color:#eee;}
+dt            {font-weight:700;}
+dd            {margin:0 0 0 10px;}
+abbr, acronym {cursor: help;}
+blockquote    {padding:2px 30px; background:#ccd0d0;}
+.aligncenter  {display:block; margin:0 auto; text-align:center;}
+.alignright   {float:right;}
+.alignleft    {float:left;}
+
+.wp-smiley, #respond img{vertical-align:middle;}
+input[type=submit], button, input.button{font:15px/19px Arial; background:#777977; color:#fff; height:25px; width:80px; cursor:pointer; border-top:1px solid #aaa; border-right:1px solid #888; border-bottom:1px solid #3b3b3b; border-left:1px solid #777;}
+input[type=submit]:hover, button:hover, input.button:hover{background:#676a67; color:#bbb; border:1px solid #666;}
+.scrolling a  {float:right; text-decoration:none;}
+#top          {height:16px;}
+#pagenavi     {margin:5px 10px;}
+.page-numbers {margin:10px 2px; padding:1px 8px; text-decoration:none; background:#878e87; color:#fff;}
+.page-numbers:hover{background:#777e77; color:#bbc0bb;}
+.prev, .dots, .next{border:none;}
+.dots         {color:#fff;}
+.current, .current:hover{background:#292e2b; color:#9ba09b; border:1px solid #292e2b;}
+
+/* #wrapper = #header + (#sidebar + #content) keep 90% width */
+#wrapper      {width:90%; min-width:750px; margin:0 auto;}
+
+/* header */
+#header       {height:149px; background:url(img/header.jpg) no-repeat right #000;}
+#logo         {display:block; width:144px; height:72px; margin:14px 10px 0 20px; float:left; background:url(img/logo.gif) no-repeat;}
+#cssChanger   {float:right; margin:15px;}
+#cssChanger a {cursor: pointer; text-decoration:none; color:#888;}
+#cssChanger a:hover{color:#ccc;}
+
+#site-title   {margin:0 0 4px; padding-top:27px; font:30px/24px Arial; font-weight:700;}
+#site-title a {text-decoration:none; color:#ddd;}
+#site-title a:hover{color:#fff;}
+#searchform   {float:right; margin-right:10px; position:relative; top:19px;}
+#s            {width:110px;}
+#s, #searchsubmit{margin:10px 0 0 4px;}
+#searchsubmit{font:15px/19px Arial}
+.screen-reader-text{display:none;}
+.description  {font-weight:700; color:#888;}
+
+/* #sidebar */
+#sidebar      {margin:5px 0; padding:0 2px; background:#b2b7b6;}
+.widget       {margin:6px 4px; background:url(img/widget-up.png) repeat-x #969c9c; border:1px solid #eee;}
+.widget h3    {font-size:15px; padding:3px 0; cursor:default;}
+.slide-area   {background:url(img/widget-dn.png) repeat-x bottom #979d9d;}
+.slide-area   {padding:0 5px 8px; z-index:99;}
+.slide-area li{padding: 2px 12px;}
+.slide-area li:hover{background:#898f8f;}
+.recentcomments li{height:50px; font-size:12px; overflow:hidden;}
+.recentcomments a img{max-width: 100px; max-height: 47px;}
+.recentcomments .avatar {margin: 6px 8px 0 -3px; float:left; width:36px; height:36px;}
+
+/* sidebar at left */
+#sidebar{width:20%; float:left; height:auto;}
+.widget{float:none; max-width:none;}
+.widget h3{margin:0 10px; text-align:left;}
+.slide-area{display:block; position:static;}
+#content{width:79%; float:right; padding:0 0 0 .4%;}
+.recentcomments li{width:auto;}
+
+/* #content */
+#content li   {padding-left: 15px;}
+#content .wp-caption{background: #eee; line-height: 15px; padding: 2px; text-align: center;}
+#content .wp-caption p.wp-caption-text{color: #555; margin: 0 auto 5px;}
+.query-info   {margin:5px 0; padding:8px 50px; background:url(img/on.gif) no-repeat 12px 3px #8b9294; color:#fff; font-size:17px; border:1px solid #99a; border-top:1px solid #bbb;}
+.entry        {margin:5px 0; padding:0 16px 5px; overflow:hidden; background:#b6b9ba; color:#1e2222; border:1px solid #c6cbca; border-top:1px solid #eee;}
+.entry h3, .entry h4, .entry h5{position:relative; top:10px;}
+.entry h3, .entry h5{color:#fff;}
+.entry h4     {font:18px/12px Arial; font-weight:700;}
+.entry h5, .entry h6{font:15px/10px Arial; font-weight:700;}
+.entry img    {margin:5px 5px 5px;}
+.entry p      {margin:12px 0;}
+
+.single-entry ol li{list-style: decimal inside;}
+.single-entry ul li{list-style: square inside;}
+.single-entry {padding-bottom:20px;background:url(img/signature.png) no-repeat right bottom } /* 只在 single 出現的簽名圖 */
+.post-title   {font:22px/24px 'Trebuchet MS'; font-weight:700; margin:10px 0;}
+.post-title a {text-decoration:none;}
+.postmetadata {margin:0 -11px; padding:3px 20px; background:url(img/metabg.png) #a5aaa8; border:1px solid #808884; border-top:1px solid #a8b4a8;}
+.postmetadata a, .commentmetadata a, small {text-decoration:none;}
+.postmetadata img{margin:0; vertical-align:middle;}
+.postmetadata .sticky{font-size:14px; color:#fb4;}
+
+#center       {font-size:13px; color:#444;}
+#center h3    {margin:0 0 12px;}
+.nofind       {position:relative; bottom:60px; font-size:22px; font-weight:700; padding:20px 70px; background:url(../../../wp-includes/js/tinymce/plugins/inlinepopups/skins/clearlooks2/img/confirm.gif) no-repeat 30px 19px #D6D7D5; color:#fff;}
+
+/* links */
+.xoxo         {margin:10px; padding:10px 10px 20px; background:url(img/friendship.jpg) no-repeat top right #343635;}
+.xoxo img     {margin:0; padding:0; width:16px; height:16px;}
+.link-entry .post-title{margin-left:12px;margin-bottom: 0;}
+.link-entry img{margin-right: 8px; vertical-align:middle;}
+.link-entry a {text-decoration:none;}
+
+/* comment */
+#comments     {margin:0; padding:15px 12px 5px;}
+.commentlist .comment{clear:both; padding:5px; border:1px solid #9ca4a0; word-wrap: break-word;}
+.odd, .avatar {background:#babdbc;}
+.even         {background:#aaaead;}
+.commentlist .depth-1{margin:5px; border:1px solid #c2c2c2;}
+.vcard img    {margin:5px 10px 0 0; float:left; width:42px; height:42px;}
+.vcard cite   {font-size:17px; line-height:30px;}
+.comment p, #submit{margin-left:6px;}
+.comment img  {max-width: 97.5%;}
+.children     {margin-left:10px;}
+.inverse_color, .link-entry {color:#ddd;}
+.inverse_color a, .link-entry a:hover{color:#bbb;}
+.inverse_color a:hover, .link-entry a{color:#fff;}
+
+/* respond */
+#respond      {clear:both; margin:5px 5px 20px; padding:5px 10px 10px; overflow:hidden; background:#a0a6a4; border-top:1px solid #ccc; border-right:1px solid #898; border-bottom:1px solid #666; border-left:1px solid #898;}
+#respond h3, #respond p{margin:3px 0;}
+#author-info  {position:absolute; margin:10px 0 0 15px; display:none;}
+#author-info img{height:60px; width:60px;}
+.author-name  {font-size:22px; font-style:italic; margin-left:8px;}
+#comment-author-info{float:left; margin:0 5px;}
+.comment-reply-link, .commentmetadata, .small, #toggle-comment-author-info{font-size:12px; color:#333;}
+.comment-reply-link, #loading img, #error img{position:relative; bottom:3px;}
+textarea      {width:98%; margin-bottom:5px; font:15px/24px Arial; }
+textarea, input{padding:2px 4px; background:#cacdcc; color:#333; border-top:1px solid #666; border-right:1px solid #888; border-bottom:1px solid #fff; border-left:1px solid #777;}
+input         {font:15px/20px Arial;}
+#comment_mail_notify{background:none; border:none;}
+#pings        {margin:20px 0 0 10px;}
+.pingdate     {font-size:12px; color:#888;}
+
+/* #footer */
+#footer       {clear:both; min-width:768px; font-size:12px; text-align:center; margin: 8px 0 0;padding:0 0 6px; background:url(img/footer.gif) #000 repeat-x; color:#666; border-top:1px solid #333;}
+#footer p     {margin: 30px 0 8px;}
+#footer a     {color:#777;}
+#footer a:hover{color:#aaa;}
+#footer .rss  {padding-left:18px; background:url(../../../wp-includes/images/rss.png) no-repeat 0 1px;}
+
+/* code */
+#upload-script, #load-script, #save-script, .hidden{display:none;}
+#message, #controls{float:right; margin:0 8px; padding:0;}
+[disabled], [disabled]:hover{color:#444; cursor:default;}
+fieldset      {padding:3px 10px 10px;}
+.notice       {color:#c00;}
+.notice a     {color:#029;}
+.notice a:hover{color:#00f;}
+
+/* table */
+table {width:90%; text-align:center;}
+th           {background:#959b99; border:1px solid #898f8d;}
+.td1, .td2, .td1c, .td2c{border:1px solid #a0a6a4; padding:0 10px;}
+.td1, .td1c   {background:#b8bcbe;}
+tr, .td2, .td2c   {background:#c8ccce;}
+.td1c, .td2c  {color:#c03;}
+
+/* codecolorer */
+pre, .codecolorer-container {width:95%; margin:-10px auto 0; color:#000000; font: 13px/20px 'Courier New'; border: 1px solid #9ca4a0;}
+.codecolorer-container table {border:0;}
+.codecolorer-container table td {margin:0; padding:0;}
+.codecolorer-container table td.line-numbers {padding: 5px; text-align:right; color: #222233; background-color: #bbc2c4; border-right:1px solid #a7afab;}
+.codecolorer-container table td.line-numbers div {width:23px;}
+pre, .codecolorer-container, .codecolorer {background:url(img/codecolorer_bg.gif) #d7dadc top;}
+pre, .codecolorer {text-align:left; padding:10px;}

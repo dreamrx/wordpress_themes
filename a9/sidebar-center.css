@@ -1,0 +1,12 @@
+/*
+Theme Name: A9
+Version: 1.9.1
+*/
+
+/* sidebar at center */
+#sidebar{clear:both; width:auto; float:none; height:43px;}
+.widget{float:left; max-width:200px;}
+.widget h3{margin:0 35px; text-align:center;}
+.slide-area{display:none; position:absolute;}
+#content{width:auto; float:none; padding:0;}
+.recentcomments li{width:190px;} 
