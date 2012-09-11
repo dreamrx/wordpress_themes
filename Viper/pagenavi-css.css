@@ -1,0 +1,10 @@
+.wp-pagenavi a{border:1px solid #CCC;margin:0 1px;padding:4px 7px;-moz-border-radius:5px;-khtml-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;display:inline;}
+.wp-pagenavi a:hover{background:#eee;border-color:#AAA;color:#000;text-decoration:none;display:inline;}
+.wp-pagenavi span.pages{padding:1px 7px 1px 22px!important;height:16px;line-height:16px;-moz-border-radius:5px;-khtml-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;display:inline; }
+*+html .wp-pagenavi span.pages{padding:2px 7px 2px 22px !important;display:inline;}
+
+
+.wp-pagenavi span.current{background:#ebeded;padding:4px 7px;border:1px solid #AAA;color:#00a9e9;-moz-border-radius:5px;-khtml-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;display:inline;}
+
+.wp-pagenavi span.extend{padding:2px 4px;-moz-border-radius:5px;-khtml-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;display:inline; background:}
+

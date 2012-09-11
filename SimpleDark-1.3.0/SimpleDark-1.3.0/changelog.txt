@@ -1,0 +1,257 @@
+﻿1.0.1
+去除一个调试时遗留的alert信息。
+Removed an alert message since debugging stage.
+
+1.0.2
+修正单篇日志搜索时的问题。(在不存在Paginator的情况下对其进行重新加载所引起)
+Fixed problems when doing AJAX search on single post.
+
+1.0.3
+重写了主题脚本加载的代码，使其不与其他插件加载的jQuery等脚本冲突。
+Rewrote the code for loading JavaScript libs to solve the conflict with the registered jQuery lib.
+
+1.0.4
+调整文字颜色，增加del和ins元素样式。
+Adjusted the text color and added style for <del> and <ins> elements.
+
+1.0.5
+修改了Page的metadata显示。("Author posted in Category" -> "Posted by Author")
+修改了JS参数传递的形式，原来为从JS文件的query string中传递，现改为直接使用PHP在<script>元素内写出。
+修正了鼠标移至页面右侧导致左侧固定导航按钮高亮的bug。
+Changed the display of page metadata.("Author posted in Category" -> "Posted by Author")
+Changed the way of passing parameters to JavaScript codes from appending query string to script URL, to directly writing script in HTML.
+Fixed the problem that the fixed-positioned navigator on the left side would be highlighted when mouse cursor is moved to the right of the page.
+
+1.0.6
+修正了一个多语言翻译上的错误。(singular.php中的'Posted by %s')
+Fixed a translation problem.('Posted by %s' in singular.php)
+
+1.1.0
+修正了选择了"在非单篇文章中显示标签"而没有标签时未处理多语言显示的问题。
+修正了AJAX提交评论后刷新WP-RecentComments时的错误。
+在<header>中加入了文章与评论的RSS源的<link>。
+在images/PSD目录下添加了标题图片的.psd源文件。
+用JS调整了在评论中嵌入宽图片时图片的大小，以防其超出评论显示范围而被遮盖。
+去掉了最后一个列表项的水平分隔线(仅对支持CSS3选择器的浏览器有效)。
+调整了后台选项的样式，且将选项进行了分组。
+增加了后台选项中对许可协议的说明。
+增加了一些主题选项，用来设置顶部导航。
+增加了一些主题选项，用来设置文章Feed中输出的额外信息。
+增加了一些主题选项，用来设置Google Analytics代码，并选择是否不跟踪已登录的管理员的访问信息。
+Fixed a translation problem on a post without tags when the theme option "Show post tags on archive pages" is checked.
+Fixed the problem caused by refreshing the WP-RecentComments widget on AJAX comment submission.
+Added <link> elements for entries feed and comments feed in the <header>.
+Added .psd file of blog title image in the directory "images/PSD" for customization use.
+Fixed the problem that large images will exceed the comment body when they are inserted into comments.
+Removed the horizontal separator below last list items.(Only works under browsers supporting CSS3 selectors)
+Adjusted the styles of the theme options page and grouped the options.
+Added some explanation for the license in the theme options page.
+Added some theme options to configure the top menu.
+Added some theme options to configure additional information output in feed contents.
+Added some theme options to configure Google Analytics, and to set whether to exclude Google Analytics for logged-in administrators or not.
+
+1.1.1
+修正了评论表单无法用tab依次聚焦的问题。(thanks to Sparanoid)
+修复了IE6下输入评论后评论框变宽的问题(为评论框设定了固定宽度)。
+使用jQuery插件autoResize来自动调整用户输入文字以后的评论框高度。
+Fixed the problem of focusing comment form using tab.
+Fixed the problem that the comment form will grow wider after inputing some text under IE 6(set fixed with for it).
+Used the jQuery plugin 'autoResize' to automatically adjust the height of the comment form after user input.
+
+1.1.2
+修正了侧边栏 RSS 源模块不能修改标题的问题。(thanks to 薄人)
+Fixed the problem of failing to modify the title of the SimpleDark RSS feed widget.
+
+1.1.3
+修改了订阅源的link标签中硬编码的title属性，现在输出"[博客标题] 的文章 RSS 源"与"[博客标题] 的评论 RSS 源"。(thanks to 薄人)
+Modified the hard coded title attribute in RSS link element. Now the titles are changed to "[Blog Title] Entries RSS Feed" and "[Blog Title] Comments RSS Feed".
+
+1.1.4
+修正了在没有启用插件WP-RecentComments时，提交评论后不能恢复评论框状态的问题。(thanks to blueandhack)
+Fixed the problem of failing to recover the comment form from submitting state after a comment is submitted without activating the plugin WP-RecentComments.
+
+1.1.5
+修改上个版本中的一个错误，现在已经可以成功恢复评论框状态。
+增加了在文章摘要和评论中显示WP-Syntax代码块语言类型的功能。
+修改了页面尾部处脚本文件的加载方式。
+使主题选项页面的<textarea>可以自适应高度。(thanks to blueandhack for the suggestion)
+Fixed a problem in the last update and now the comment form state recovery works fine.
+Added support for displaying code language in excerpts and comments when formatting code using WP-Syntax.
+Changed the way how footer scripts are loaded.
+Enabled auto height adjustment for textareas in the theme options page.
+
+1.1.6
+修正了上一个版本中的一个错误，去除了在后台管理页面重新加载jQuery 1.4的代码，导致JS加载顺序出现问题。
+Fixed a problem in the last update by removing code that reload jQuery 1.4 for admin pages which causes problem in the order of loading JS files.
+
+1.2.0
+适用WordPress版本调整为3.0及以上。
+调整了部分代码以减少debug模式下的notice。
+修改了顶部菜单，使其支持WordPress3.0的自定义菜单，并支持多菜单项的横向滚动以及一级下拉菜单。
+增加、调整了多处正文内容的CSS样式。
+增加了一个主题选项，可以自定义小于某尺寸的图片不显示边框效果。
+增加了在日志编辑器中导入editor-style.css的功能，使编辑日志时看到的效果尽量接近于实际效果。
+去除了页面底部的一个作者链接。
+修正了单篇日志AJAX分页导航总显示第一页的错误。
+增加了模板attachment.php。
+通过add_theme_support('post-thumbnails')来添加文章缩略图功能。
+通过add_theme_support('automatic-feed-links')来添加RSS<link>元素。
+修正了带Caption的图片在各个定位方式下可能产生的问题。
+修改了评论表单的输出方式，使用新增的comment_form()进行输出。
+增加了控制AJAX子功能开启/关闭的多个主题选项。
+修改了对WP-Syntax的插件支持，更好地显示代码语言。
+修正了通过AJAX读取搜索结果后导航菜单及左侧固定导航按钮可能显示不正确提示的问题。
+添加了对WordPress原生嵌套评论的支持，最多支持5层嵌套。
+取消了allowed tags区域的展开效果，改为始终显示。
+根据评论层级对评论中图片的显示大小作出调整，修正了悬浮显示@评论原评论时大图片溢出的问题。
+修正了搜索结果列表中页面说明信息中的一个文字错误。
+WordPress version requirement has been changed to 3.0 and above.
+Made some fixes to reduce notices under debug mode.
+Remade the top navigation menu which now supports custom menus in WordPress 3.0 and with support to horizontal scrolling for numerous menu items and 1-level dropdown.
+Added and changed lots of CSS settings for post content.
+Added a theme option to enable border removal for images smaller than a size which can be set.
+Added support to import editor-style.css which makes editing posts looks more similar to published ones.
+Removed an author link in the footer.
+Fixed the problem that the first page always appears while doing page navigation within a single paged post.
+Added a template attachment.php for attachment pages.
+Added support for post thumbnails by using add_theme_support('post-thumbnails').
+Changed the way to output <link> elements for RSS feeds to using add_theme_support('automatic-feed-links').
+Fixed the alignment problems for images with captions.
+Changed the way to output comment form by using the newly added comment_form().
+Added theme options to turn on/off each AJAX functionality.
+Changed theme support for the plugin WP-Syntax to display language name more friendly.
+Fixed the problem that navigation cues indicate wrongly after doing AJAX search.
+Added support for WordPress native thread comments with the thread level limit of 5.
+Removed the scrolling down effect for displaying allowed tags in comments. Now it always displays.
+Added dynamic adjustment for comment image sizes according to comment depth and fixed the problem that large images used to overflow tooltip area when mouse over @reply link.
+Fixed a literal mistake in page information displayed in search result list.
+
+1.2.1
+修改了多处过时方法调用。
+修正了细微的错误。
+Changed a few calls to deprecated functions.
+Fixed a few minor errors.
+
+1.2.2
+修正了去除小图片边框时JS参数的错误。
+在图片加载完毕后才修正图片尺寸。
+Fixed a JS parameter problem when removing borders for small images.
+Now adjust image size only after images are loaded.
+
+1.2.3
+添加了意大利语支持。(thanks to Gianni Diurno)
+修改了主题元数据。
+修改了博客描述区的大小以显示更长的描述文字而不与导航栏重叠。
+页内滚动现在可以滚动到带有name属性的锚点。(thanks to Mark Amgine)
+调整了next_post_link和previous_post_link调用的位置。(thanks to Mark Amgine)
+修复了导致AJAX设置可能无效的问题。(thanks to Sc千寻)
+修正了CSS文件中的一个语法错误。
+修正了Ctrl+Enter提交评论无效的问题。(thanks to 白手)
+修正了IE6下视频宽度限制可能无效的问题。(thanks to Freell)
+Added Italian language support.
+Changed theme meta information.
+Adjusted the size of blog description area which better displays long description, preventing it from overlapping with menu area.
+Scroll easing for anchors with name attributes is now available.
+Changed the order of calling next_post_link and previous_post_link.
+Fixed a problem which will make AJAX settings uneffective.
+Fixed a syntax error in the CSS file.
+Fixed the problem when submitting comment using Ctrl+Enter.
+Fixed the problem that video width restriction might fail under IE6.
+
+1.2.4
+根据官方主题自动扫描结果更新了一些WordPress模板标签。
+Updated some WordPress template tags according to the result of automated theme scanning on WordPress.org.
+
+1.2.5
+调整了简体中文版样式的一处文字大小。
+微调了WP-RecentComments插件显示的样式。
+修正了一个选项Ctrl+Enter提交评论设置无效的问题。(thanks to 毕扬)
+增加了一个主题选项，用来设置是否自动在评论中添加@回复链接。(thanks to 亦白。)
+Adjusted a font size setting for Simplified Chinese version.
+Slightly changed the style for the plugin WP-RecentComments.
+Fixed the problem that Ctrl+Enter submit setting did not work properly.
+Added a theme option to turn on/off automatically inserting links for '@reply'.
+
+1.2.6
+修正了每次登陆会重置选项的bug。(thanks to 毕扬)
+修改了ie.css的URL的输出代码。
+Fixed the problem that theme options are reset each time the admin logs in.
+Changed the URL output code for ie.css.
+
+1.2.7
+将404.php中的一处硬编码属性改为调用bloginfo进行输出。
+Replaced a hard-coded meta tag in 404.php with bloginfo call.
+
+1.2.8
+修正了AJAX搜索时搜索框Loading图片不显示的问题。
+修正了在单篇文章页面进行AJAX搜索翻页失效的问题。(thanks to Huangliu)
+修正了样式上的一些小问题。
+添加了捷克语支持。(thanks to Michal Marek)
+Fixed the problem that the loading image is missing when doing AJAX search.
+Fixed the problem that AJAX pagination fails when doing AJAX search at a single post/page.
+Fixed some flaws on styles.
+Added Czech language support.
+
+1.2.9
+修正了开启嵌套评论情况下AJAX提交评论后显示的一个问题。(thanks to Huangliu)
+Fixed a problem of displaying new comments submitted by AJAX when threaded comments are enabled.
+
+1.2.10
+修正了在评论中显示的WP-Syntax代码样式。
+修正了评论中图片边框的处理问题。
+添加了俄语支持。(thanks to kowack)
+修正了<dt>标签样式上小问题。
+Fixed WP-Syntax code style within comments.
+Fixed the unhandled image border removal problem in comments.
+Added Russian language support.
+Fixed a flaw on <dt> styles.
+
+1.2.11
+完善了<object>元素以及<embed>元素样式，修正了一些其他样式上的小问题。
+修正了WordPress 3.1中新添的管理工具条在单篇文章页面无法显示的问题。
+修正了一个XSS漏洞。
+改善了AJAX搜索中的一点问题。
+增加了readme.txt。
+增加了一些缺失的文字域。
+Improved styles for <object> and <embed> elememts. Fixed some style problems.
+Fixed the problem that the Admin Bar added in WordPress 3.1 was unable to display on single posts or pages.
+Fixed an XSS vulnerability.
+Improved AJAX search a little bit.
+Added readme.txt.
+Added some missing text domains.
+
+1.3.0
+完善了样式。
+为RSS源中输出的WP-Syntax加亮代码添加了一个深色背景。
+修改完善了editor-style.css，使其和文章显示效果一致。
+增加了点击评论中@回复链接后导航到那条评论所在分页的功能。
+修正了在关闭嵌套评论的情况下评论仍嵌套显示的问题。
+修正了一个管理页面中的JS错误。
+修正了在关闭AJAX评论提交时无法使用Ctrl+Enter提交评论的问题。
+调整了Analytics代码输出的位置。
+更新了AJAX评论提交的客户端代码。
+优化了WP-Syntax的主题配色，并解决了一些样式上的问题。
+调整了主题选项代码，增加了是否开启评论快速修改的选项。
+修改了attachment.php使其兼容Jetpack的Sharedaddy功能。
+为每条评论增加了固定链接。
+jQuery更换为WordPress自带的版本。
+增加了对评论时表情选择的支持。
+增加了评论编辑功能。
+增加了对post format功能的支持。
+Slightly improved the styles.
+Added a dark background color for code highlighted by WP-Syntax in RSS feed.
+Modified and improved editor-style.css making it consistent with post styles.
+Now clicking on @reply link will navigate to the page of the original comment.
+Fixed a JS error in admin pages.
+Fixed the problem that Ctrl+Enter comment submission doesn't work when AJAX comment submission is turned off.
+Adjusted the location of Analytics code snippet.
+Fixed the problem that comments are displayed in threads even if thread comment is disabled.
+Updated the server-side code for AJAX comment submission.
+Improved the color settings for WP-Syntax and fixed some style problems.
+Adjusted some code for theme options and added a new theme option to turn on/off comment quick edit.
+Modified attachments.php to make it compatible with Sharedaddy in Jetpack.
+Added a permalink for each comment.
+Changed jQuery lib to the one comes with WordPress itself.
+Added support for comment smileys selection.
+Added support for comment editing.
+Added support for post formats.
